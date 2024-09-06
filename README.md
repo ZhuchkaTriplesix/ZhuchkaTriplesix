@@ -1,4 +1,4 @@
-<h1 align="center">Meow 👋, I'm Vladimir Kozlov</h1>
+<h1 align="center">Hi 👋, I'm Vladimir Kozlov</h1>
 <h3 align="center">Python Backend developer from Moscow</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=zhuchkatriplesix&label=Profile%20views&color=0e75b6&style=flat" alt="zhuchkatriplesix" /> </p>
