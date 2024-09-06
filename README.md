@@ -12,12 +12,6 @@
 ## 🏆 GitHub Trophies
 [![trophy](https://github-trophies.vercel.app/?username=ZhuchkaTriplesix&theme=tokyonight&no-frame=false&no-bg=true&margin-w=4)](https://github.com/lucthienphong1120/github-trophies)
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
-
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=ZhuchkaTriplesix&limit=5&theme=tokyonight&combine_all_yearly_contributions=true)
-
 ---
 [![](https://visitcount.itsvg.in/api?id=ZhuchkaTriplesix&icon=0&color=0)](https://visitcount.itsvg.in)
 
