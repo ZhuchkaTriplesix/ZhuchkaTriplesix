@@ -46,18 +46,18 @@ Backend Python Developer | Building scalable APIs and microservices
 ## Monitoring & Testing
 ![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white)
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white)
-![Traffic](https://img.shields.io/badge/Traffic-FF6600?style=for-the-badge&logo=traffic&logoColor=white)
+![Traefik](https://img.shields.io/badge/traefik-%2324A1FF.svg?style=for-the-badge&logo=traefikproxy&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
 ---
 
 # 📊 GitHub Stats
 
-![](https://github-readme-stats.vercel.app/api?username=ZhuchkaTriplesix&theme=neon&hide_border=false&include_all_commits=true&count_private=true)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ZhuchkaTriplesix&theme=neon&hide_border=false&include_all_commits=true&count_private=true)
 
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=ZhuchkaTriplesix&theme=neon&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ZhuchkaTriplesix&theme=neon&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
-![](https://github-readme-streak-stats.demolab.com/?user=ZhuchkaTriplesix&theme=neon&hide_border=false)
+![GitHub Streak](https://github-readme-streak-stats.demolab.com/?user=ZhuchkaTriplesix&theme=neon&hide_border=false)
 
 ## 🏆 GitHub Trophies
 
