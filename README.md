@@ -1,5 +1,7 @@
 # 💫 About Me
 
+Meow
+
 Backend Python Developer | Building scalable APIs and microservices
 
 📍 Moscow/Bishkek | 🏢 Ternhost, Center for Diagnostics and Telemedicine, Querya
