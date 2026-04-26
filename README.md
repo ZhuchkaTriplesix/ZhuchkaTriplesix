@@ -17,7 +17,7 @@ I focus on building high-performance developer tools and low-latency backend sys
 ### 🧪 Technical Focus
 
 * **Systems:** High-concurrency architectures, R&D, and performance optimization.
-* **Languages:** Python (FastAPI, Django), Rust (PyO3, Axum, Tokio).
+* **Languages:** Python (FastAPI), Rust (PyO3, Axum, Tokio), Dart(Flutter), JS(Vue, React, Nuxt).
 * **Infrastructure:** CI/CD, Kubernetes, and efficient data processing.
 
 ---
