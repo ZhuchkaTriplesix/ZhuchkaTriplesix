@@ -23,4 +23,4 @@ I focus on building high-performance developer tools and low-latency backend sys
 ---
 
 ### 📫 Connect with me
-[Website](https://queryahub.com/) • [LinkedIn](https://linkedin.com/in/vladimir-kozlov-1b0177382 • [Email](mailto:mrlololoshka94@gmail.com)
+[Website](https://queryahub.com/) • [LinkedIn](https://linkedin.com/in/vladimir-kozlov-1b0177382) • [Email](mailto:mrlololoshka94@gmail.com)
