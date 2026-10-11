@@ -72,7 +72,6 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=ZhuchkaTriplesix&show_icons=true&hide_border=true&bg_color=10121a&title_color=ff4d8d&icon_color=ff4d8d&text_color=ffd1e3" alt="Telemetry" width="49%">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ZhuchkaTriplesix&layout=compact&hide_border=true&bg_color=10121a&title_color=ff4d8d&text_color=ffd1e3" alt="Top languages" width="49%">
+<img src="./assets/stats.svg" alt="Telemetry Overview" width="100%">
 
 </div>
