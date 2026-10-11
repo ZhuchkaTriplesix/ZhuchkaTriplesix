@@ -78,11 +78,6 @@
 
 </div>
 
----|---|
-| **[Querya Desktop](https://github.com/QueryaHub/Querya-Desktop)** | Лёгкий кроссплатформенный SQL & NoSQL клиент на Flutter |
-| **[OxyJWT](https://github.com/QueryaHub/OxyJWT)** | Быстрая JWT-библиотека для Python на Rust, в обход GIL |
-| **[OxyRoute](https://github.com/QueryaHub/OxyRoute)** | Python веб-фреймворк с роутингом на Rust |
-
 ---
 
 <div align="center">
