@@ -11,7 +11,69 @@ import urllib.request
 
 USER = os.environ.get("GH_USER", "ZhuchkaTriplesix")
 TOKEN = os.environ["GH_TOKEN"]
-OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "stats.svg")
+ASSETS = os.path.join(os.path.dirname(__file__), "..", "assets")
+OUT = os.path.join(ASSETS, "stats.svg")
+
+PROJECTS = [
+    {
+        "slug": "querya",
+        "repo": "QueryaHub/Querya-Desktop",
+        "tag": "01 // DATABASE STUDIO",
+        "name": "Querya Desktop",
+        "line": "Cross-platform SQL & NoSQL client with a 2D virtualized grid and DML staging buffer.",
+        "stack": "FLUTTER  \u2022  POSTGRESQL  \u2022  MYSQL  \u2022  SQLITE  \u2022  REDIS  \u2022  MONGODB",
+        "accent": "#00f5d4",
+    },
+    {
+        "slug": "oxyjwt",
+        "repo": "QueryaHub/OxyJWT",
+        "tag": "02 // CRYPTO LIBRARY",
+        "name": "OxyJWT",
+        "line": "Drop-in PyJWT replacement with a Rust core: up to 4x faster, JWKS support, no GIL.",
+        "stack": "PYTHON  \u2022  RUST  \u2022  PYO3  \u2022  MATURIN  \u2022  JWKS",
+        "accent": "#ff4d8d",
+    },
+    {
+        "slug": "mojelly",
+        "repo": "Limnetic-Git/mojelly",
+        "tag": "03 // BACKEND FRAMEWORK",
+        "name": "Mojelly",
+        "line": "Fast async backend framework for Mojo with zero-copy FFI to C.",
+        "stack": "MOJO  \u2022  C FFI  \u2022  HTTP  \u2022  ASYNC  \u2022  LINUX",
+        "accent": "#ff7a1a",
+    },
+]
+
+CARD = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 124" width="100%" height="100%">
+  <defs>
+    <pattern id="screentone" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.8" fill="#ffffff" fill-opacity="0.03" />
+    </pattern>
+  </defs>
+  <style>
+    .tag { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 10.5px; font-weight: bold; letter-spacing: 1px; fill: %%ACCENT%%; }
+    .name { font-family: -apple-system, BlinkMacSystemFont, 'Impact', 'Arial Black', sans-serif; font-size: 26px; font-weight: 900; fill: #f0f2f8; }
+    .line { font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #8d93a8; }
+    .stack { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: bold; letter-spacing: 1px; fill: #4d5366; }
+    .lbl { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: bold; letter-spacing: 1.5px; fill: #72798f; }
+    .val { font-family: -apple-system, BlinkMacSystemFont, 'Impact', 'Arial Black', monospace; font-size: 28px; font-weight: 900; fill: %%ACCENT%%; }
+    .sub { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: bold; letter-spacing: 0.5px; fill: #63697e; }
+  </style>
+  <rect width="850" height="124" fill="#07080c" rx="8" stroke="#1d202e" stroke-width="1.2" />
+  <rect width="850" height="124" fill="url(#screentone)" rx="8" />
+  <rect x="0" y="14" width="4" height="96" fill="%%ACCENT%%" />
+
+  <text x="36" y="30" class="tag">[%%TAG%%]</text>
+  <text x="36" y="64" class="name">%%NAME%%</text>
+  <text x="36" y="87" class="line">%%LINE%%</text>
+  <text x="36" y="108" class="stack">%%STACK%%</text>
+
+  <line x1="660" y1="24" x2="660" y2="100" stroke="#181a26" stroke-width="1" />
+  <text x="684" y="36" class="lbl">STARS</text>
+  <text x="684" y="72" class="val">\u2605 %%STARS%%</text>
+  <text x="684" y="94" class="sub">%%LANG%%  \u2022  %%LICENSE%%</text>
+</svg>
+"""
 
 TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 175" width="100%" height="100%">
   <defs>
@@ -94,7 +156,33 @@ def search_total(kind, q):
     return call(f"https://api.github.com/search/{kind}?per_page=1&q={urllib.parse.quote(q)}")["total_count"]
 
 
+def esc(t):
+    return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def write_cards():
+    for p in PROJECTS:
+        meta = call(f"https://api.github.com/repos/{p['repo']}")
+        values = {
+            "ACCENT": p["accent"],
+            "TAG": p["tag"],
+            "NAME": p["name"],
+            "LINE": p["line"],
+            "STACK": p["stack"],
+            "STARS": f"{meta['stargazers_count']:,}",
+            "LANG": (meta.get("language") or "-").upper(),
+            "LICENSE": ((meta.get("license") or {}).get("spdx_id") or "-").upper(),
+        }
+        svg = CARD
+        for k, v in values.items():
+            svg = svg.replace(f"%%{k}%%", esc(str(v)))
+        with open(os.path.join(ASSETS, f"project-{p['slug']}.svg"), "w", encoding="utf-8") as f:
+            f.write(svg)
+        print(f"{p['repo']}: stars={meta['stargazers_count']}")
+
+
 def main():
+    write_cards()
     commits = search_total("commits", f"author:{USER}")
     prs = search_total("issues", f"author:{USER} type:pr")
     gql = call(

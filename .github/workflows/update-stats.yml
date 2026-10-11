@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Regenerate assets/stats.svg
+      - name: Regenerate stats and project cards
         env:
           # Optional PAT (read:org + repo) to include private repos/orgs;
           # falls back to the default token (public data only).
@@ -24,9 +24,9 @@ jobs:
 
       - name: Commit if changed
         run: |
-          git diff --quiet assets/stats.svg && exit 0
+          git add -A assets
+          git diff --cached --quiet && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats.svg
           git commit -m "chore: update stats"
           git push

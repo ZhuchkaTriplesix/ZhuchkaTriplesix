@@ -62,8 +62,23 @@
 
 ### 💗 Проекты
 
-| | |
-|---|---|
+<div align="center">
+
+<a href="https://github.com/QueryaHub/Querya-Desktop">
+  <img src="./assets/project-querya.svg" alt="Querya Desktop" width="100%">
+</a>
+
+<a href="https://github.com/QueryaHub/OxyJWT">
+  <img src="./assets/project-oxyjwt.svg" alt="OxyJWT" width="100%">
+</a>
+
+<a href="https://github.com/Limnetic-Git/mojelly">
+  <img src="./assets/project-mojelly.svg" alt="Mojelly" width="100%">
+</a>
+
+</div>
+
+---|---|
 | **[Querya Desktop](https://github.com/QueryaHub/Querya-Desktop)** | Лёгкий кроссплатформенный SQL & NoSQL клиент на Flutter |
 | **[OxyJWT](https://github.com/QueryaHub/OxyJWT)** | Быстрая JWT-библиотека для Python на Rust, в обход GIL |
 | **[OxyRoute](https://github.com/QueryaHub/OxyRoute)** | Python веб-фреймворк с роутингом на Rust |

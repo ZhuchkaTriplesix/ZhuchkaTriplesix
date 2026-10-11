@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 124" width="100%" height="100%">
+  <defs>
+    <pattern id="screentone" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.8" fill="#ffffff" fill-opacity="0.03" />
+    </pattern>
+  </defs>
+  <style>
+    .tag { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 10.5px; font-weight: bold; letter-spacing: 1px; fill: #00f5d4; }
+    .name { font-family: -apple-system, BlinkMacSystemFont, 'Impact', 'Arial Black', sans-serif; font-size: 26px; font-weight: 900; fill: #f0f2f8; }
+    .line { font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #8d93a8; }
+    .stack { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: bold; letter-spacing: 1px; fill: #4d5366; }
+    .lbl { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: bold; letter-spacing: 1.5px; fill: #72798f; }
+    .val { font-family: -apple-system, BlinkMacSystemFont, 'Impact', 'Arial Black', monospace; font-size: 28px; font-weight: 900; fill: #00f5d4; }
+    .sub { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: bold; letter-spacing: 0.5px; fill: #63697e; }
+  </style>
+  <rect width="850" height="124" fill="#07080c" rx="8" stroke="#1d202e" stroke-width="1.2" />
+  <rect width="850" height="124" fill="url(#screentone)" rx="8" />
+  <rect x="0" y="14" width="4" height="96" fill="#00f5d4" />
+
+  <text x="36" y="30" class="tag">[01 // DATABASE STUDIO]</text>
+  <text x="36" y="64" class="name">Querya Desktop</text>
+  <text x="36" y="87" class="line">Cross-platform SQL &amp; NoSQL client with a 2D virtualized grid and DML staging buffer.</text>
+  <text x="36" y="108" class="stack">FLUTTER  •  POSTGRESQL  •  MYSQL  •  SQLITE  •  REDIS  •  MONGODB</text>
+
+  <line x1="660" y1="24" x2="660" y2="100" stroke="#181a26" stroke-width="1" />
+  <text x="684" y="36" class="lbl">STARS</text>
+  <text x="684" y="72" class="val">★ 23</text>
+  <text x="684" y="94" class="sub">DART  •  MIT</text>
+</svg>
