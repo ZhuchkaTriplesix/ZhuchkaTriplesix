@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c0e14"/>
+      <stop offset="0.6" stop-color="#1a0b15"/>
+      <stop offset="1" stop-color="#3a0f26"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff4d8d" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ff4d8d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff8fb8"/>
+      <stop offset="1" stop-color="#e0407c"/>
+    </linearGradient>
+    <linearGradient id="blade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9aa3b5"/>
+      <stop offset="0.5" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#8b93a6"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#000" opacity="0.25"/>
+    </pattern>
+    <path id="heart" d="M0 -6 c-9 -14 -30 -2 -20 14 c6 10 20 18 20 18 s14 -8 20 -18 c10 -16 -11 -28 -20 -14z"/>
+  </defs>
+
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <g stroke="#ff4d8d" stroke-opacity="0.08">
+    <path d="M0 60H1200M0 120H1200M0 180H1200M0 240H1200M0 300H1200"/>
+    <path d="M100 0V360M200 0V360M300 0V360M400 0V360M500 0V360M600 0V360M700 0V360M800 0V360M900 0V360M1000 0V360M1100 0V360"/>
+  </g>
+
+  <!-- falling hearts -->
+  <g fill="#ff4d8d" opacity="0.5">
+    <use href="#heart" transform="translate(620,0) scale(0.35)"><animateTransform attributeName="transform" type="translate" additive="sum" values="0,-20;0,400" dur="7s" repeatCount="indefinite"/></use>
+    <use href="#heart" transform="translate(760,0) scale(0.25)"><animateTransform attributeName="transform" type="translate" additive="sum" values="0,-20;0,400" dur="5s" begin="-2s" repeatCount="indefinite"/></use>
+    <use href="#heart" transform="translate(900,0) scale(0.4)"><animateTransform attributeName="transform" type="translate" additive="sum" values="0,-20;0,400" dur="9s" begin="-4s" repeatCount="indefinite"/></use>
+    <use href="#heart" transform="translate(1040,0) scale(0.3)"><animateTransform attributeName="transform" type="translate" additive="sum" values="0,-20;0,400" dur="6s" begin="-1s" repeatCount="indefinite"/></use>
+    <use href="#heart" transform="translate(1140,0) scale(0.22)"><animateTransform attributeName="transform" type="translate" additive="sum" values="0,-20;0,400" dur="8s" begin="-5s" repeatCount="indefinite"/></use>
+  </g>
+
+  <!-- Yuno -->
+  <g transform="translate(60,0)">
+    <circle cx="240" cy="190" r="190" fill="url(#aura)">
+      <animate attributeName="r" values="170;195;170" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- back hair -->
+    <path d="M110 200 C90 80 160 20 245 20 C340 20 400 90 380 210 C375 270 395 320 380 360 L110 360 C130 300 115 250 110 200Z" fill="url(#hair)"/>
+    <!-- shoulders -->
+    <path d="M70 360 C80 300 150 285 245 285 C340 285 410 300 420 360Z" fill="#1d1f2b"/>
+    <path d="M205 285 L245 330 L285 285Z" fill="#f4dccf"/>
+    <!-- bow -->
+    <path d="M245 318 l-30 -16 v34z M245 318 l30 -16 v34z" fill="#ff1f5a"/>
+    <circle cx="245" cy="318" r="7" fill="#c4103f"/>
+    <!-- neck + face -->
+    <rect x="228" y="250" width="34" height="45" fill="#efd2c4"/>
+    <ellipse cx="245" cy="180" rx="88" ry="100" fill="#f7e1d6"/>
+    <!-- side locks -->
+    <path d="M150 120 C135 190 140 250 160 290 C170 240 168 180 170 130Z" fill="url(#hair)"/>
+    <path d="M340 120 C355 190 350 250 330 290 C320 240 322 180 320 130Z" fill="url(#hair)"/>
+    <!-- bangs -->
+    <path d="M155 120 C170 60 230 40 245 40 C275 40 330 70 335 120 C310 100 290 110 270 135 C262 105 250 100 245 100 C238 100 228 105 220 135 C200 110 175 100 155 120Z" fill="url(#hair)"/>
+    <!-- ahoge-ish accent -->
+    <path d="M245 40 C235 10 255 -5 275 8 C258 10 252 25 252 40Z" fill="#ff8fb8"/>
+    <!-- eyes -->
+    <g filter="url(#glow)">
+      <ellipse cx="205" cy="190" rx="22" ry="26" fill="#ff1f5a">
+        <animate attributeName="ry" values="26;26;26;2;26" keyTimes="0;0.85;0.9;0.93;1" dur="4s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="285" cy="190" rx="22" ry="26" fill="#ff1f5a">
+        <animate attributeName="ry" values="26;26;26;2;26" keyTimes="0;0.85;0.9;0.93;1" dur="4s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+    <circle cx="205" cy="190" r="5" fill="#2a0010"/>
+    <circle cx="285" cy="190" r="5" fill="#2a0010"/>
+    <circle cx="198" cy="180" r="4" fill="#fff"/>
+    <circle cx="278" cy="180" r="4" fill="#fff"/>
+    <!-- smile -->
+    <path d="M222 238 Q245 256 268 238" fill="none" stroke="#c4103f" stroke-width="3" stroke-linecap="round"/>
+    <!-- cheek blood-ish blush -->
+    <ellipse cx="178" cy="222" rx="14" ry="6" fill="#ff6b9a" opacity="0.5"/>
+    <ellipse cx="312" cy="222" rx="14" ry="6" fill="#ff6b9a" opacity="0.5"/>
+
+    <!-- knife -->
+    <g transform="translate(395,330) rotate(-35)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum" values="-3;3;-3" dur="3s" repeatCount="indefinite"/>
+      <path d="M0 0 L12 -170 L28 0Z" fill="url(#blade)"/>
+      <rect x="-6" y="0" width="40" height="8" rx="3" fill="#ff4d8d"/>
+      <rect x="6" y="8" width="16" height="48" rx="5" fill="#2a2c3a"/>
+    </g>
+  </g>
+
+  <!-- text -->
+  <g font-family="'Courier New', monospace">
+    <text x="560" y="70" font-size="13" letter-spacing="5" fill="#ff4d8d">FUTURE DIARY :: ENTRY #0001</text>
+
+    <g font-size="64" font-weight="bold" letter-spacing="4">
+      <text x="556" y="168" fill="#00e5ff" opacity="0.6">
+        <animate attributeName="x" values="556;552;560;556" dur="2.5s" repeatCount="indefinite"/>
+        YUNO GASAI
+      </text>
+      <text x="560" y="164" fill="#ff1f5a" opacity="0.7">
+        <animate attributeName="x" values="560;564;556;560" dur="2.5s" repeatCount="indefinite"/>
+        YUNO GASAI
+      </text>
+      <text x="558" y="166" fill="#ffe3ee">YUNO GASAI</text>
+    </g>
+
+    <text x="560" y="212" font-size="20" fill="#ffd1e3">Software Engineer · Python / Rust</text>
+    <text x="560" y="244" font-size="16" fill="#9aa3b5">Co-founder @ QueryaHub</text>
+
+    <text x="560" y="300" font-size="18" fill="#ff4d8d">&gt; i will protect your code. at any cost.
+      <animate attributeName="opacity" values="1;1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- heartbeat -->
+  <path d="M0 340 H420 l12 -22 l16 44 l16 -56 l16 34 l8 -10 H1200" fill="none" stroke="#ff4d8d" stroke-width="2" filter="url(#glow)" stroke-dasharray="1400" stroke-dashoffset="1400">
+    <animate attributeName="stroke-dashoffset" from="1400" to="0" dur="3.5s" repeatCount="indefinite"/>
+  </path>
+
+  <rect width="1200" height="360" fill="url(#scan)"/>
+</svg>
