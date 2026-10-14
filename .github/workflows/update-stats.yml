@@ -2,7 +2,7 @@ name: Update stats
 
 on:
   schedule:
-    - cron: "0 3 * * *"
+    - cron: "0 9 * * *"  # 12:00 MSK (UTC+3)
   workflow_dispatch:
 
 permissions:
