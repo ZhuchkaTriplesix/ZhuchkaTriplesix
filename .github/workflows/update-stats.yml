@@ -16,11 +16,16 @@ jobs:
 
       - name: Regenerate stats and project cards
         env:
-          # Optional PAT (read:org + repo) to include private repos/orgs;
-          # falls back to the default token (public data only).
-          GH_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          # PAT (read:org + repo) of the profile owner: required, otherwise
+          # private repos/commits/PRs/orgs are invisible to the API.
+          GH_TOKEN: ${{ secrets.STATS_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
-        run: python3 scripts/update_stats.py
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::Secret STATS_TOKEN is not set; refusing to publish public-only numbers"
+            exit 1
+          fi
+          python3 scripts/update_stats.py
 
       - name: Commit if changed
         run: |

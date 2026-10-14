@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://queryahub.com/">
-    <img src="https://img.shields.io/badge/QUERYA-queryahub.com-10121a?style=for-the-badge&logo=rust&logoColor=ff4d8d&borderColor=ff4d8d" />
+    <img src="https://img.shields.io/badge/QUERYA-queryahub.com-10121a?style=for-the-badge&logo=flutter&logoColor=02569B&borderColor=ff4d8d" />
   </a>
   <a href="https://linkedin.com/in/vladimir-kozlov-1b0177382">
     <img src="https://img.shields.io/badge/LINKEDIN-vladimir--kozlov-10121a?style=for-the-badge&logo=linkedin&logoColor=0A66C2&borderColor=ff4d8d" />
