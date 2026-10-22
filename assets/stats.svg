@@ -56,7 +56,7 @@
   <!-- Column 4: Pull Requests -->
   <g transform="translate(656, 68)">
     <text y="0" class="lbl">PULL REQUESTS</text>
-    <text y="38" class="val" fill="#f0f2f8">1,744</text>
+    <text y="38" class="val" fill="#f0f2f8">821</text>
     <text y="58" class="sub" fill="#63697e">REVIEWS &amp; MERGES</text>
   </g>
 </svg>
