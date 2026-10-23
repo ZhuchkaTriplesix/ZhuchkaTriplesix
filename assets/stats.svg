@@ -26,7 +26,7 @@
   <!-- Column 1: Commits -->
   <g transform="translate(36, 68)">
     <text y="0" class="lbl">TOTAL COMMITS</text>
-    <text y="38" class="val" fill="#f0f2f8">6,504</text>
+    <text y="38" class="val" fill="#f0f2f8">6,583</text>
     <text y="58" class="sub" fill="#ff4d8d">PUBLIC COMMITS</text>
   </g>
 
@@ -56,7 +56,7 @@
   <!-- Column 4: Pull Requests -->
   <g transform="translate(656, 68)">
     <text y="0" class="lbl">PULL REQUESTS</text>
-    <text y="38" class="val" fill="#f0f2f8">821</text>
+    <text y="38" class="val" fill="#f0f2f8">1,746</text>
     <text y="58" class="sub" fill="#63697e">REVIEWS &amp; MERGES</text>
   </g>
 </svg>
